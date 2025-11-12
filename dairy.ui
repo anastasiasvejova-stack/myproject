@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>958</width>
-    <height>703</height>
+    <width>707</width>
+    <height>630</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -20,8 +20,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: white; /* Синий фон */
-</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -271,27 +270,6 @@ background-color: white; /* Синий фон */
            </property>
           </widget>
          </item>
-         <item>
-          <widget class="QPushButton" name="search_btn">
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color: #ffd813; /* Белый цвет текста */
-background-color: white; /* Синий фон */
-</string>
-           </property>
-           <property name="text">
-            <string>Поиск</string>
-           </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>../../Downloads/1828948.png</normaloff>../../Downloads/1828948.png</iconset>
-           </property>
-          </widget>
-         </item>
         </layout>
        </widget>
       </item>
@@ -309,6 +287,16 @@ background-color: white; /* Синий фон */
        </spacer>
       </item>
       <item>
+       <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>задачи на:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QWidget" name="widget_2" native="true">
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
@@ -318,6 +306,11 @@ background-color: white; /* Синий фон */
              <pointsize>10</pointsize>
             </font>
            </property>
+           <item>
+            <property name="text">
+             <string/>
+            </property>
+           </item>
            <item>
             <property name="text">
              <string>&quot;сегодня&quot;</string>
@@ -404,29 +397,6 @@ background-color: white; /* Синий фон */
       </item>
      </layout>
     </item>
-    <item>
-     <widget class="QWidget" name="widget_3" native="true">
-      <widget class="QLabel" name="pic_label">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>0</y>
-         <width>451</width>
-         <height>621</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap resource="resources.qrc">:/istockphoto-518854697-612x612.jpg</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </widget>
-    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -434,7 +404,7 @@ background-color: white; /* Синий фон */
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>958</width>
+     <width>707</width>
      <height>26</height>
     </rect>
    </property>

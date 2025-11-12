@@ -14,8 +14,8 @@ template = """<?xml version="1.0" encoding="UTF-8"?>
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>958</width>
-    <height>703</height>
+    <width>707</width>
+    <height>630</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -28,8 +28,7 @@ template = """<?xml version="1.0" encoding="UTF-8"?>
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: white; /* Синий фон */
-</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -279,27 +278,6 @@ background-color: white; /* Синий фон */
            </property>
           </widget>
          </item>
-         <item>
-          <widget class="QPushButton" name="search_btn">
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color: #ffd813; /* Белый цвет текста */
-background-color: white; /* Синий фон */
-</string>
-           </property>
-           <property name="text">
-            <string>Поиск</string>
-           </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>../../Downloads/1828948.png</normaloff>../../Downloads/1828948.png</iconset>
-           </property>
-          </widget>
-         </item>
         </layout>
        </widget>
       </item>
@@ -317,6 +295,16 @@ background-color: white; /* Синий фон */
        </spacer>
       </item>
       <item>
+       <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>задачи на:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QWidget" name="widget_2" native="true">
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
@@ -326,6 +314,11 @@ background-color: white; /* Синий фон */
              <pointsize>10</pointsize>
             </font>
            </property>
+           <item>
+            <property name="text">
+             <string/>
+            </property>
+           </item>
            <item>
             <property name="text">
              <string>&quot;сегодня&quot;</string>
@@ -412,29 +405,6 @@ background-color: white; /* Синий фон */
       </item>
      </layout>
     </item>
-    <item>
-     <widget class="QWidget" name="widget_3" native="true">
-      <widget class="QLabel" name="pic_label">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>0</y>
-         <width>451</width>
-         <height>621</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap resource="resources.qrc">:/istockphoto-518854697-612x612.jpg</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </widget>
-    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -442,7 +412,7 @@ background-color: white; /* Синий фон */
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>958</width>
+     <width>707</width>
      <height>26</height>
     </rect>
    </property>
@@ -580,7 +550,7 @@ category_dialog = '''<?xml version="1.0" encoding="UTF-8"?>
     <x>0</x>
     <y>0</y>
     <width>374</width>
-    <height>430</height>
+    <height>325</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -588,18 +558,16 @@ category_dialog = '''<?xml version="1.0" encoding="UTF-8"?>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="work_btn">
      <property name="styleSheet">
       <string notr="true">QPushButton{
     min-width:  350px;
     max-width:  100px;
-    min-height: 35px;
+    min-height: 38px;
     max-height: 35px;
-	color: #ff007f; /* Белый цвет текста */
-	background-color: white; /* Синий фон */
-	}
-
-</string>
+	color: purple;           /* Например, белый цвет текста */
+	background-color: white
+}</string>
      </property>
      <property name="text">
       <string>работа</string>
@@ -607,16 +575,16 @@ category_dialog = '''<?xml version="1.0" encoding="UTF-8"?>
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="home_btn">
      <property name="styleSheet">
       <string notr="true">QPushButton{
     min-width:  350px;
     max-width:  100px;
-    min-height: 35px;
+    min-height: 38px;
     max-height: 35px;
-	color: #aa00ff; /* Белый цвет текста */
-	background-color: white; /* Синий фон */
-	}</string>
+	color: #ff557f;           /* Например, белый цвет текста */
+	background-color: white
+}</string>
      </property>
      <property name="text">
       <string>дом</string>
@@ -624,16 +592,16 @@ category_dialog = '''<?xml version="1.0" encoding="UTF-8"?>
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="store_btn">
      <property name="styleSheet">
       <string notr="true">QPushButton{
     min-width:  350px;
     max-width:  100px;
-    min-height: 35px;
+    min-height: 38px;
     max-height: 35px;
-	color:  #ffd900; /* Белый цвет текста */
-	background-color: white; /* Синий фон */
-	}</string>
+	color: #ffe308;           /* Например, белый цвет текста */
+	background-color: white
+}</string>
      </property>
      <property name="text">
       <string>покупки</string>
@@ -646,11 +614,11 @@ category_dialog = '''<?xml version="1.0" encoding="UTF-8"?>
       <string notr="true">QPushButton{
     min-width:  350px;
     max-width:  100px;
-    min-height: 35px;
+    min-height: 38px;
     max-height: 35px;
-	color:  #ffaa00; /* Белый цвет текста */
-	background-color: white; /* Синий фон */
-	}</string>
+	color: orange;           /* Например, белый цвет текста */
+	background-color: white
+}</string>
      </property>
      <property name="text">
       <string>другое</string>
@@ -658,17 +626,11 @@ category_dialog = '''<?xml version="1.0" encoding="UTF-8"?>
     </widget>
    </item>
    <item>
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
      </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
+    </widget>
    </item>
   </layout>
  </widget>
@@ -684,26 +646,32 @@ class Dairy(QMainWindow):
         f = io.StringIO(template)
         uic.loadUi(f, self)
         self.setWindowTitle("Ежедневник")
+        self.current_category = ""
         self.category_btn.clicked.connect(self.categories)
         self.calendar_btn.clicked.connect(self.calendar)
         self.new_event_btn.clicked.connect(self.new_event)
         self.date_cmb.activated.connect(self.date)
         self.connect_bd("dairy.db")
+        self.load_events()
+
 
     def connect_bd(self, name):
-        con = sqlite3.connect(name)
-        cur = con.cursor()
+        self.con = sqlite3.connect(name)
+        self.cur = self.con.cursor()
 
-        result = cur.execute('''CREATE TABLE tasks (
+        result = self.cur.execute('''CREATE TABLE IF NOT EXISTS tasks (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         title TEXT NOT NULL, 
         category TEXT NOT NULL CHECK (category in ('работа', 'дом', 'покупки', 'другое')),
         date TEXT NOT NULL,
         reminder TEXT NOT NULL)''').fetchone()
-        con.commit()
+        self.con.commit()
 
     def categories(self):
-        pass
+        dialog = CategoryDialog(self)
+        if dialog.exec() == QDialog.DialogCode.Accepted:
+            self.current_category = dialog.category
+            self.load_events()
 
     def calendar(self):
         pass
@@ -715,11 +683,28 @@ class Dairy(QMainWindow):
         pass
 
 
-class newtask(QDialog):
-    def __init__(self):
-        super().__init__()
-        uic.loadUi(new_task, self)
+class Newtask(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        f = io.StringIO(new_task)
+        uic.loadUi(f, self)
         self.reminder_time.setDisplayFormat("HH:mm")
+
+
+class CategoryDialog(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        f = io.StringIO(category_dialog)
+        uic.loadUi(f, self)
+        self.category = None
+        self.work_btn.clicked.connect(lambda: self.select_category("работа"))
+        self.home_btn.clicked.connect(lambda: self.select_category("дом"))
+        self.store_btn.clicked.connect(lambda: self.select_category("покупки"))
+        self.other_btn.clicked.connect(lambda: self.select_category("другое"))
+
+    def select_category(self, category):
+        self.category = category
+        self.accept()
 
 
 if __name__ == '__main__':
