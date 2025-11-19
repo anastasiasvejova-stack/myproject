@@ -652,7 +652,6 @@ class Dairy(QMainWindow):
         self.new_event_btn.clicked.connect(self.new_event)
         self.date_cmb.activated.connect(self.date)
         self.connect_bd("dairy.db")
-        self.load_events()
 
 
     def connect_bd(self, name):
@@ -661,17 +660,17 @@ class Dairy(QMainWindow):
 
         result = self.cur.execute('''CREATE TABLE IF NOT EXISTS tasks (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        title TEXT NOT NULL, 
-        category TEXT NOT NULL CHECK (category in ('работа', 'дом', 'покупки', 'другое')),
-        date TEXT NOT NULL,
-        reminder TEXT NOT NULL)''').fetchone()
+        title TEXT, 
+        category TEXT CHECK (category in ('работа', 'дом', 'покупки', 'другое')),
+        date TEXT,
+        reminder TEXT)''').fetchall()
         self.con.commit()
 
     def categories(self):
-        dialog = CategoryDialog(self)
-        if dialog.exec() == QDialog.DialogCode.Accepted:
-            self.current_category = dialog.category
-            self.load_events()
+        pass
+
+    def load_events(self):
+        pass
 
     def calendar(self):
         pass
